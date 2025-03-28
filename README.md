@@ -38,6 +38,13 @@ https://fakestoreapi.com/products/category/jewelery
 
 ## Screenshots
 ![Home Screen](screenshots/flutter_01.png)
+![Home Screen](screenshots/flutter_02.png)
+![Home Screen](screenshots/flutter_03.png)
+![Home Screen](screenshots/flutter_04.png)
+![Home Screen](screenshots/flutter_05.png)
+![Home Screen](screenshots/flutter_06.png)
+![Home Screen](screenshots/flutter_07.png)
+![Home Screen](screenshots/flutter_08.png)
 
 ## Features Breakdown
 
