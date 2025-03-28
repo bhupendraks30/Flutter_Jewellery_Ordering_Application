@@ -18,7 +18,7 @@ This is a Flutter-based **Jewellery Ordering Application** that includes **user 
 ### 1. Clone the Repository
 ```sh
 git clone https://github.com/bhupendraks30/Flutter_Jewellery_Ordering_Application 
-cd jewellery-app
+cd Flutter_Jewellery_Ordering_Application
 ```
 ### 2. Install Dependencies
 ```sh
