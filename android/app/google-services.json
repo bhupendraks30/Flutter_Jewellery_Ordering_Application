@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "691250037191",
+    "project_id": "auth-firebase-faa64",
+    "storage_bucket": "auth-firebase-faa64.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691250037191:android:9ea1d1eeb3a1afdd8fd9e2",
+        "android_client_info": {
+          "package_name": "com.example.jewellery_ordering_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691250037191-vmqrf85oqm5g8jt0nu77g7j99emjqioj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jewellery_ordering_app",
+            "certificate_hash": "d120b7a2756b0811c188220327d570fd8f352bdd"
+          }
+        },
+        {
+          "client_id": "691250037191-paunm9sbegbp7pkobhebkqa47sent5q9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYqlTbUQbEuw6JX9j248XDrUIaDWnMfB0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691250037191-paunm9sbegbp7pkobhebkqa47sent5q9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "691250037191-m88oitlinf4rr66tv9cnutcuv13cf15l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.jewelleryOrderingApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
