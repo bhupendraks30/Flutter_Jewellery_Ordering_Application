@@ -6,20 +6,20 @@
 This is a Flutter-based **Jewellery Ordering Application** that includes **user authentication**, **product listings**, **cart functionality**, **payment processing**, and **sales visualization through graphs**.
 
 ## Features
-- Google Sign-In Authentication**
-- Bottom Navigation** (Home & Profile Tabs)
-- Sales Graph** (Bar Chart for Product Sales)
-- Jewellery Listings** (Horizontal & Vertical Lists)
-- Jewellery Details Page** (With Quantity Selection & Add to Cart)
-- Cart Functionality** (Local Storage with SharedPreferences)
-- Payment Integration** (Stripe/PhonePe/Razorpay in Test Mode)
-- Profile Page** (Google User Details & Logout)
+- **Google Sign-In Authentication**
+- **Bottom Navigation** (Home & Profile Tabs)
+- **Sales Graph** (Bar Chart for Product Sales)
+- **Jewellery Listings** (Horizontal & Vertical Lists)
+- **Jewellery Details Page** (With Quantity Selection & Add to Cart)
+- **Cart Functionality** (Local Storage with SharedPreferences)
+- **Payment Integration** (Stripe/PhonePe/Razorpay in Test Mode)
+- **Profile Page** (Google User Details & Logout)
 
 ### 1. Clone the Repository
-
-git clone ## adding here the git link 
+```sh
+git clone https://github.com/bhupendraks30/Flutter_Jewellery_Ordering_Application 
 cd jewellery-app
-
+```
 ### 2. Install Dependencies
 ```sh
 flutter pub get
