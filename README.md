@@ -36,6 +36,9 @@ This app fetches jewellery items from the **Fake Store API**:
 https://fakestoreapi.com/products/category/jewelery
 ```
 
+## Screenshots
+![Home Screen](screenshots/flutter_01.png)
+
 ## Features Breakdown
 
 ### 1. Authentication
