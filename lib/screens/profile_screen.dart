@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -10,23 +11,29 @@ import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+  ProfileScreen({super.key});
 
-  Future<void> getImageFromGallary(BuildContext context) async {
-    final XFile? pickedImageXFile =
-        await ImagePicker().pickImage(source: ImageSource.gallery);
-    if (pickedImageXFile != null) {
-      File pickedImageFile = File(pickedImageXFile.path);
+  final ImagePicker _picker = ImagePicker();
 
-      //   store this file into local storage
-      final directory = await getApplicationDocumentsDirectory();
-      // creating the local path
-      final localPath = "${directory.path}/profile.jpg";
-      //   after creating the path coping the pick image into this path that is stored in temporary storage
-      pickedImageFile.copy(localPath);
+  User? user;
 
-      Provider.of<UserAuthProvider>(context, listen: false)
-          .updateUserProfile(localPath);
+  Future<void> _pickAndUploadImage(BuildContext context) async {
+    final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
+    if (pickedFile == null) return;
+
+    File file = File(pickedFile.path);
+    String fileName = "profile_pictures/${user!.uid}.jpg";
+
+    try {
+      UploadTask uploadTask =
+      FirebaseStorage.instance.ref(fileName).putFile(file);
+      TaskSnapshot snapshot = await uploadTask;
+      String downloadUrl = await snapshot.ref.getDownloadURL();
+
+      await user!.updatePhotoURL(downloadUrl);
+      Provider.of<UserAuthProvider>(context,listen: false).updateUserProfile(downloadUrl);
+    } catch (e) {
+      print("Error uploading image: $e");
     }
   }
 
@@ -63,10 +70,11 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(100.r),
                       ),
 
+                      // Firebase Storage requires a billing plan but I have not purchased this plan so i just create the logic but it is not functionaly without upgraded plan
                       // Padding(
                       //   padding: EdgeInsets.only(top: 12.r),
                       //   child: IconButton(onPressed: ()async{
-                      //     await getImageFromGallary(context);
+                      //     await _pickAndUploadImage(context);
                       //   }, icon: const Icon(Icons.edit,color: Colors.white,),style: IconButton.styleFrom(backgroundColor: Colors.blue),),
                       // )
                     ]

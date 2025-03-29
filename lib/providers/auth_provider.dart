@@ -11,7 +11,6 @@ class UserAuthProvider with ChangeNotifier{
   UserAuthProvider(){
     FirebaseAuth.instance.authStateChanges().listen((event) {
       _user = event;
-      // print('user is : ${_user?.uid}');
       notifyListeners();
     },);
   }
