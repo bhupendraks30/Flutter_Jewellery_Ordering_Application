@@ -105,6 +105,6 @@ The app uses Provider for state management.
 - Flutter
 - Firebase Authentication (Google Sign-In)
 - SharedPreferences (Local Storage)
-- Flutter Charts Library (Sales Graphs)
+- Flutter Charts Library: Syncfusion Flutter Charts (Sales Graphs)
 - Razorpay (Payment Gateway)
 - Provider (State Management)
